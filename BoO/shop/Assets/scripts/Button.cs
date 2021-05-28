@@ -17,8 +17,15 @@ public class Button : MonoBehaviour
     public void buy()
     {
         Debug.Log("bought");
-        inv.Points -= 5;
-        Debug.Log(inv.Points);
+        if(inv.Points > 0)
+        {
+            inv.Points -= 5;
+            Debug.Log(inv.Points);
+        }
+        else
+        {
+            Debug.Log("no points");
+        }
     }
 
 
